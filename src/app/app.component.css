@@ -1,0 +1,125 @@
+/* violet */
+$violet: rgb(164, 129, 240); // #a481f0
+$violet-alpha-7: rgba(164, 129, 240, 0.7); // #a481f0
+$violet-alpha-3: rgba(164, 129, 240, 0.3); // #a481f0
+$violet-alpha-1: rgba(164, 129, 240, 0.1); // #a481f0
+$violet-bright: rgb(197, 171, 255); // #C5ABFF
+$violet-bright-alpha-7: rgba(197, 171, 255, 0.7);
+$violet-bright-alpha-4: rgba(197, 171, 255, 0.4); // #C5ABFF
+$violet-dark: rgb(122, 82, 209); // #7A52D1
+
+/* white */
+$white: white;
+$white-alpha-7: rgba(255, 255, 255, 0.7);
+$white-alpha-5: rgba(255, 255, 255, 0.5);
+$white-alpha-3: rgba(255, 255, 255, 0.3);
+$white-alpha-1: rgba(255, 255, 255, 0.1);
+$white-alpha-2: rgba(255, 255, 255, 0.2);
+$white-alpha-12: rgba(255, 255, 255, 0.12);
+
+/* black */
+$black: black;
+$black-alpha-7: rgba(0, 0, 0, 0.7);
+$black-alpha-5: rgba(0, 0, 0, 0.5);
+$black-alpha-3: rgba(0, 0, 0, 0.3);
+$black-alpha-2: rgba(0, 0, 0, 0.2);
+$black-alpha-12: rgba(0, 0, 0, 0.12);
+$black-alpha-14: rgba(0, 0, 0, 0.14);
+$black-alpha-25: rgba(0, 0, 0, 0.25);
+
+/* grey */
+
+$grey-dark-dk: rgb(37, 34, 41); // #252229
+$grey-dark-dk-alpha-8: rgba(37, 34, 41, 0.8);
+$dark-medium-emphasis: rgba(37, 34, 41, 0.87);
+$grey-dark-dk-alpha-6: rgba(37, 34, 41, 0.6);
+$grey-dark-dk-alpha-5: rgba(37, 34, 41, 0.5);
+$grey-dark-dk-alpha-38: rgba(37, 34, 41, 0.38);
+$grey-dark: rgb(48, 44, 54); // #302C36
+$grey-dark-alpha-2: rgba(48, 44, 54, 0.2);
+
+$grey: rgb(73, 69, 84); // #494554
+$grey-medium: rgb(60, 56, 70); // #3C3846
+$grey-alpha-4: rgba(73, 69, 84, 0.4);
+$grey-dark-lt: rgb(52, 58, 64); // #343A40
+$grey-light: rgb(105, 100, 117); // #696475
+$grey-silver: rgb(190, 189, 191); // #BEBDBF
+$grey-silver-light: rgb(168, 167, 169); // #A8A7A9
+
+/* red */
+$red: rgb(218, 34, 48); // #DA2230
+
+/* social icons color */
+$social: (
+  facebook-bg: rgb(59, 89, 152),
+  twitter-bg: #55acee,
+  messenger-color: #0084ff
+);
+
+/* green */
+$green-dark-lt: rgb(0, 184, 148);
+
+/* bootstrap */
+$primary: #a481f0;
+$muted: #bebdbf;
+$warning: #ffeaa7;
+$danger: #ff5c5f;
+$info: #6e5c9a;
+$text-muted: #a8a7a9;
+
+/* tools kit */
+$text-disabled: $white-alpha-5;
+$text-dropdown-shadow: $violet-bright-alpha-4;
+
+.text-violet-bright {
+  color: $violet-bright;
+}
+
+.text-white-alpha-7 {
+  color: $white-alpha-7 !important;
+}
+
+.text-white-alpha-5 {
+  color: $white-alpha-5 !important;
+}
+
+.bg-info {
+  background-color: $info;
+}
+
+.bg-white-alpha-12 {
+  background-color: $white-alpha-12;
+}
+
+.bg-white-alpha-7 {
+  background-color: $white-alpha-7;
+}
+
+.bg-white-alpha-5 {
+  background-color: $white-alpha-5;
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+.bg-red {
+  background-color: $red;
+}
+
+.bg-blue-dark {
+  background-color: map-get($social, facebook-bg);
+}
+
+.bg-blue-light {
+  background-color: map-get($social, twitter-bg);
+}
+
+.bg-blue-middle-dark {
+  background-color: map_get($social, messenger-color);
+}
+
+.bg-violet-bright {
+  background-color: $violet-bright;
+}
+
