@@ -1,13 +1,13 @@
 {
-  "name": "nginx-app",
+  "name": "study-app",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "build": "ng build --prod -c=production",
     "build:en": "ng build --prod -c=production-en --base-href /en/",
     "build:uk": "ng build --prod -c=production-uk --base-href /uk/",
     "build:multi-lang": "npm run build:en && npm run build:uk",

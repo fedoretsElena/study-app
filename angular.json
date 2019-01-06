@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "nginx-app": {
+    "study-app": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/nginx-app",
+            "outputPath": "dist/study-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,6 +28,24 @@
             "scripts": []
           },
           "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "outputPath": "dist/study-app/"
+            },
             "production-en": {
               "fileReplacements": [
                 {
@@ -44,7 +62,7 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "outputPath": "dist/nginx-app-en/"
+              "outputPath": "dist/study-app-en/"
             }, "production-uk": {
               "fileReplacements": [
                 {
@@ -63,7 +81,7 @@
               "buildOptimizer": true,
               "i18nLocale": "uk",
               "i18nFormat": "xlf",
-              "outputPath": "dist/nginx-app-uk/",
+              "outputPath": "dist/study-app-uk/",
               "i18nFile": "src/locale/messages.uk.xlf"
             }
           }
@@ -71,18 +89,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "nginx-app:build"
+            "browserTarget": "study-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "nginx-app:build:production"
+              "browserTarget": "study-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "nginx-app:build"
+            "browserTarget": "study-app:build"
           }
         },
         "test": {
@@ -116,7 +134,7 @@
         }
       }
     },
-    "nginx-app-e2e": {
+    "study-app-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -124,11 +142,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "nginx-app:serve"
+            "devServerTarget": "study-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "nginx-app:serve:production"
+              "devServerTarget": "study-app:serve:production"
             }
           }
         },
@@ -144,5 +162,5 @@
       }
     }
   },
-  "defaultProject": "nginx-app"
+  "defaultProject": "study-app"
 }
