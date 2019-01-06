@@ -1,0 +1,29 @@
+os:
+  - linux
+language: node_js
+node_js:
+ - "11.0.0"
+dist: trusty
+sudo: false
+
+branches:
+  only:
+  - develop
+
+cache:
+  directories:
+    - node_modules
+
+install:
+  - npm install -g yarn
+
+script:
+  - yarn lint
+  - yarn build --base-href https://github.com/fedoretsElena/study-app/
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/study-app-en
+  on:
+    branch: develop
