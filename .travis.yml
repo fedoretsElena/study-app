@@ -16,9 +16,12 @@ cache:
 
 install:
   - npm install -g yarn
+  - npm i -g @angular/cli
+  - yarn i --silent --no-progress
 
 script:
   - yarn lint
+  - yarn test
   - yarn build --base-href https://github.com/fedoretsElena/study-app/
 deploy:
   provider: pages
