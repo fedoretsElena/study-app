@@ -31,7 +31,7 @@ before_install:
 
 script:
   - yarn lint
-  - yarn test
+  - yarn test --watch=false --progress=true
   - yarn build --base-href https://github.com/fedoretsElena/study-app/
 deploy:
   provider: pages
