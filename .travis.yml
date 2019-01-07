@@ -37,6 +37,6 @@ deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
-  local_dir: dist/study-app-en
+  local_dir: dist/study-app
   on:
     branch: develop
